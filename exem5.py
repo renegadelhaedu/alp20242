@@ -7,3 +7,6 @@ t = int(input('digite o tempo investido'))
 jc = capital * ((1 + i) ** t)
 
 print(jc)
+
+# //
+# %
