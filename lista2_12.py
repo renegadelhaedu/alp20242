@@ -4,11 +4,11 @@ sal = vhr * qtde_hr
 
 if(sal <= 900):
     ir = sal
-if(sal > 900 and sal <= 1500):
+elif(sal > 900 and sal <= 1500):
     ir = sal * 0.05
-if(sal > 1500 and sal <=2500):
+elif(sal > 1500 and sal <=2500):
     ir = sal * 0.10
-if(sal > 2500):
+else:
     ir = sal * 0.20
 
 sind = sal * 0.03
