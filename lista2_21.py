@@ -21,7 +21,3 @@ if(saq >= 10 and saq <= 600 ):
     print(f'notas de 10: {qtde10}')
     print(f'notas de 5: {qtde5}')
     print(f'notas de 1: {qtde1}')
-
-
-
-
