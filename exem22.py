@@ -16,6 +16,6 @@ else:
 sl = sbdep - imp
 print(f'o salário líquido é {sl}')
 print(f'o valor do import é {imp}')
-print(f'o salário descontado pelos dependentes {sbdep}')
+print(f'o salário descontado pelos dependentes {sl + valorDeps}')
 print(f'o total de dependentes somou {valorDeps}')
 
