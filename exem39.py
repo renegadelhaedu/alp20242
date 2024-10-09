@@ -3,8 +3,8 @@
 
 presentes = []
 
-for i in range(4):
-    nome = input('digite seu nome')
+for i in range(99999999999):
+    nome = "Wacelis"
     presentes.append(nome)
 
 print(presentes)
