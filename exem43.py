@@ -27,3 +27,14 @@ while(opcao != 0):
     elif(opcao == 3):
         for aluno in alunos:
             print(aluno)
+    elif(opcao == 4):
+        aluno = input('qual o nome do aluno que vc deseja atualizar')
+        if (aluno in alunos):
+            # index retorna o índice do elemento
+            indice = alunos.index(aluno)
+            novo_nome = input('digite o novo nome')
+            #sobrescrever o elemento para atualizar
+            alunos[indice] = novo_nome
+        else:
+            print('aluno nao encontrado')
+
