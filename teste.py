@@ -1,4 +1,3 @@
-def vida():
-    print(__name__)
+alunos = ['rene','maria','bia']
 
-vida()
+print(alunos.index('bia'))
