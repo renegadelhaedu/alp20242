@@ -1,9 +1,4 @@
 
-def atualizar_nome(lista, nomeAtual, novoNome):
-    if(nomeAtual in lista):
-        ind = lista.index(nomeAtual)
-        lista[ind] = novoNome
-
 def atualizar_nome_raiz(lista, nomeAtual, novoNome):
     ind = -1
     for i in range(len(lista)):
@@ -15,5 +10,9 @@ def atualizar_nome_raiz(lista, nomeAtual, novoNome):
     else:
         print('pessoa nao encontrada')
 
+nomes = ['Wesley', 'Pedro', 'Kelvin']
 
-
+nomeAtual = input('Informe o nome que deseja alterar: ')
+novoNome = input('Informe o novo nome: ')
+atualizar_nome_raiz(nomes, nomeAtual, novoNome)
+print(nomes)
