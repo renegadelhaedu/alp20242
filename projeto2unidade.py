@@ -1,4 +1,4 @@
-users = [['rene','rene@r','123']]
+users = [['rene','rene@r','123'],['samuel','s@gm','456'],['jose','jose','444']]
 events = []
 
 def verificar_senha(senha1, senha2):
