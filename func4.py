@@ -1,11 +1,10 @@
-#estruturas de dados: lista, conjunto, dicionário
-nums = [1,2,3]
-nome = 'rene'
-def a(lista):
-    lista.append(5)
+minic = [['dev', 50.0, 'eu eue u', []], ['bd', 40.0, 'kakakaka', []]]
 
-def b(valor):
-    valor = valor + 'kkk'
+for i in range(2):
+    nome = input('digite nome')
+    email = input('digite seu email')
 
-b(nome)
-print(nome)
+    ind = int(input('digite o indice do mmininucr'))
+    minic[ind][3].append(email)
+
+print(minic)

@@ -15,6 +15,7 @@ def verificar_user_existente(email, usuarios):
             break
     return existe
 
+
 op = -1
 while(op != 0):
     print('1-Cadastrar usuário')
