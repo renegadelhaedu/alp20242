@@ -6,6 +6,22 @@ nome = 'aa'
 users = [['rene','rene@r','123'],['samuel','s@gm','456'],['jose','jose','444']]
 events = []
 
+
+events.append(['show da xuxa', 'a@q', 200])
+
+ind_remocao = -1
+achei  = False
+for evento in events:
+    ind_remocao = ind_remocao + 1
+    if(evento[0] == 'show da xuxa'):
+        achei = True
+        break
+
+if(achei):
+    events.pop(ind_remocao)
+    print('usuario removido com sucesso')
+
+
 op = -1
 while(op != 0):
     print('1-Cadastrar usuário')
