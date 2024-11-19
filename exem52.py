@@ -13,6 +13,7 @@ for i in range(4):
 soma = 0
 for chave in pessoas:
     soma = soma + pessoas[chave][1]
+    #soma = soma + pessoas.get(chave)[1]
 
 print('a soma de salários foi ', soma)
 
