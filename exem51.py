@@ -16,7 +16,7 @@ professores = {'wacelys@gmail.com':['wacelys',25,'umari']
 #print(professores['a'])
 login = 'wacelys@gmail.com'
 senha = 25
-if login in professores and professores[login][1] == senha:
+if login in professores and professores[login][1] ==  senha:
     print('usuario logado')
     print('mostrar menu')
 else:
