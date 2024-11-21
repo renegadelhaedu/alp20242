@@ -1,26 +1,10 @@
 import usuarios as usu
-import eventos as ev
+import Eventos as eve
 
 nome = 'aa'
-
-users = [['rene','rene@r','123'],['samuel','s@gm','456'],['jose','jose','444']]
-events = []
-
-
-events.append(['show da xuxa', 'a@q', 200])
-
-ind_remocao = -1
-achei  = False
-for evento in events:
-    ind_remocao = ind_remocao + 1
-    if(evento[0] == 'show da xuxa'):
-        achei = True
-        break
-
-if(achei):
-    events.pop(ind_remocao)
-    print('usuario removido com sucesso')
-
+users ={'r':['rene','123'], 's@gm':['samuel','456']}
+#users = [['rene','rene@r','123'],['samuel','s@gm','456'],['jose','jose','444']]
+events = {'rar2024':['rock n rio 2024','s@gm', 100000, 3000]}
 
 op = -1
 while(op != 0):
@@ -40,8 +24,38 @@ while(op != 0):
             senha = input('digite sua senha')
             senha2 = input('Repita sua senha')
 
-        novo_usuario = [nome, email, senha]
-        usu.inserir_usuario(novo_usuario, users)
+        novo_usuario = [nome, senha]
+        usu.inserir_usuario(email, novo_usuario, users)
+
+    elif op == 2:
+        login = input('digite seu login/e-mail')
+        senha = input('digite sua senha')
+
+        if not usu.fazer_login(login, senha, users):
+            print('Usuário ou senha inválidos')
+        else:
+            opmenu = -1
+            while(op != 0):
+
+                print('------- MENU--------')
+                print('3-criar evento')
+                print('4-buscar evento')
+                print('5-listar eventos')
+
+                opmenu = int(input('digite a opcao desejada'))
+                if(opmenu == 3):
+                    nome_even = input('qual o nome do evento')
+                    codigo = input('qual o codigo do evento')
+                    limite = int(input('qual o limite de pessoas'))
+                    preco = float(input('qual o preco do ingresso'))
+
+                    eve.criar_evento(codigo, nome_even, login, limite, preco, events)
+                elif(opmenu == 5):
+                    eve.listar_eventos(events)
+
+
+
+
 
 
 
