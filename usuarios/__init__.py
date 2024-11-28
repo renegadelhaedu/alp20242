@@ -32,6 +32,24 @@ def fazer_login(login, senha, usuarios):
 
     return logado
 
+def adicionar_arquivo(nome, senha):
+    arquivo = open('usuarios.txt','a')
+    arquivo.write(f'{nome},{senha}\n')
+    arquivo.close()
+
+def login_arquivo(nome, senha):
+    arquivo = open('usuarios.txt', 'r')
+    linhas = arquivo.readlines()
+    arquivo.close()
+    for linha in linhas:
+        mod = linha.replace('\n', '')
+        nome_user = mod.split(',')[0]
+        senha_user = mod.split(',')[1]
+        if nome == nome_user and senha == senha_user:
+            return True
+
+    return False
+
 
 
 

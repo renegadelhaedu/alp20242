@@ -24,13 +24,16 @@ while(op != 0):
             senha = input('digite sua senha')
             senha2 = input('Repita sua senha')
 
+        usu.adicionar_arquivo(nome,senha)
         novo_usuario = [nome, senha]
         usu.inserir_usuario(email, novo_usuario, users)
 
     elif op == 2:
         login = input('digite seu login/e-mail')
         senha = input('digite sua senha')
-
+        print('teste em nossa base de dados em arquivo')
+        print(usu.login_arquivo(login, senha))
+        input('----------------')
         if not usu.fazer_login(login, senha, users):
             print('Usuário ou senha inválidos')
         else:
