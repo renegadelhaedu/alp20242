@@ -12,6 +12,12 @@ def verificar_user_existente(email, usuarios):
             break
     return existe
 
+def inserir_usuario_arquivo(email, nome, senha):
+    arquivo = open('usuarios.txt','a')
+    arquivo.write(f'{email},{senha},{nome}\n')
+    arquivo.close()
+
+
 def inserir_usuario(login, usuario, usuarios):
     usuarios[login] = usuario
 
